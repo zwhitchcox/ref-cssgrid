@@ -1,7 +1,7 @@
 .container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(5, auto);
+  grid-template-rows: repeat(6, auto);
   grid-auto-flow: column;
 
   // grid-template-columns: 1fr 1fr 1fr;
@@ -20,10 +20,11 @@
     &:hover {
       background-color: #eee;
     }
-    // &:nth-child(4) {
-    //   grid-column-start: 1;
-    //   grid-column-end: span 3;
-    // }
+    &:nth-child(4) {
+      grid-column-start: 1;
+      grid-column-end: span 2;
+      grid-row: 2 / span 2
+    }
     // &:nth-child(5) {
     //   grid-column: 1 / 3;
     //   grid-row: 3 / 6;
