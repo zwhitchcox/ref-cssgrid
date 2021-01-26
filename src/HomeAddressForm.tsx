@@ -1,9 +1,9 @@
 import * as React from 'react'
-import './Form.scss'
+import './HomeAddressForm.scss'
 
-const Form = () => (
-  <div className="form-1">
-    <form action="">
+const HomeAddressForm = () => (
+  <div className="home-address">
+    <form className="form1" action="">
       <div className="spacer" />
       <label className="first-name">First Name</label>
       <input id="firstName" type="text" />
@@ -29,4 +29,4 @@ const Form = () => (
   </div>
 )
 
-export default Form
+export default HomeAddressForm

@@ -1,0 +1,70 @@
+$highlight-color: #444;
+$placeholder-padding: .9rem;
+$placeholder-font-size: 1.05rem;
+$placeholder-font-size-small: .95rem;
+$placeholder-transition: 200ms ease-in-out;
+$input-font-size: $placeholder-font-size;
+$input-padding: 1.2rem;
+$input-top: 1.5rem;
+$input-height: 2.5rem;
+$input-border-color: #444;
+$input-color: $input-border-color;
+
+.form-input {
+  width: 100%;
+  label {
+    position: relative;
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    min-height: $input-height + $input-top;
+  }
+
+  .placeholder {
+    background-color: white;
+    position: absolute;
+    display: block;
+    top: ($input-height / 2) + $placeholder-padding;
+    z-index: 2;
+    font-size: $placeholder-font-size;
+    transition: all $placeholder-transition;
+    color: $input-color;
+    cursor: text;
+    left: 1rem;
+  }
+
+  input {
+    position: absolute;
+    color: $input-color;
+    top: $input-top;
+    z-index: 1;
+    width: 100%;
+    font-size: $input-font-size;
+    border: 1px solid $input-border-color;
+    border-radius: .2rem;
+    // border: 0;
+    // border-bottom: 1px solid $input-border-color;
+    transition: border-color $placeholder-transition;
+    outline: none;
+    padding: .8rem;
+    margin: 0;
+  }
+
+  input {
+    height: $input-height;
+    color: $input-color;
+  }
+
+  input:focus,
+  input:valid {
+    & + .placeholder {
+      top: 0;
+      cursor: inherit;
+      font-size: $placeholder-font-size-small;
+      color: $highlight-color;
+    }
+
+    // border: 2px solid $highlight-color;
+    // border-bottom: 2px solid $highlight-color;
+  }
+}

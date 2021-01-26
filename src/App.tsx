@@ -2,6 +2,9 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.scss';
 import Form from './Form';
+import HomeAddressForm from './HomeAddressForm'
+import MuiInput from './MuiInput';
+import MuiForm from './MuiForm';
 
 // https://css-tricks.com/snippets/css/complete-guide-grid/
 function App() {
@@ -12,7 +15,9 @@ function App() {
           <div className="item">{i+1}</div>
         ))}
       </div> */}
-      <Form />
+      {/* <HomeAddressForm /> */}
+      <MuiForm />
+      {/* <MuiInput /> */}
     </div>
   );
 }
